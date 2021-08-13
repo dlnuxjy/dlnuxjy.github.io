@@ -8,7 +8,7 @@ categories: []
 
 想拥有一个属于自己的博客吗？整理并记录日常工作生活中的点滴，还可以分享给世界各地的朋友，让更多的人认识和了解你。未完待续吧，总之懂得自然懂。
 
-# hexo
+# 基础
 
 hexo 是一个快速，简介且高效的博客框架，更重要的是居然是免费的。使用 hexo 可以迅速建立属于你的博客，可以是本地的，也可以是网络的。hexo 中有很多的主题和插件可以选择，[https://hexo.io/zh-cn/](https://hexo.io/zh-cn/) 这里是官网。
 
@@ -175,3 +175,35 @@ yuque-hexo sync && hexo g && hexo d
 ```
 
 3. 现在，你的雨雀中 <myblog>里面的文档就上传完成了。
+4. 别忘了将 hexo 工程也上次到 github 中的 src 分支中
+
+```shell
+git add .
+git commit -m "yuque"
+git push origin src
+```
+
+# 个性化
+
+## 博客标题，子标题，描述，作者，语言怎么设置？
+
+1. 修改`_config.yml`
+
+```shell
+# Site
+title: 这里写你的标题
+subtitle: 这里写你的子标题
+description: 这里写你的描述
+keywords:
+author: 这里写你的名字
+language: zh-CN #中文
+timezone: '' #时区还是默认吧
+```
+
+2. 上传到 github
+
+```shell
+yuque-hexo sync && hexo g && hexo d
+```
+
+## 换一个主题
